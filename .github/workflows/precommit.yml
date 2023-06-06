@@ -9,14 +9,14 @@ on:
   issue_comment:
     types: [created]
   schedule:
-    - cron: '45 * * * *'
+    - cron: '52 * * * *'
 
 
 jobs:
   beam_PreCommit_Go:
 #   if: ${{ github.event.issue.pull_request == 'Run Go PreCommit'}}
 # if: ${{github.event.issue.pull_request}} && 
-    if: ${{github.event.issue.pull_request}} || ${{github.event.comment.body == 'Run Go PreCommit'}}
+    if: ${{github.event.issue.pull_request}} || ${{github.event.comment.body == 'Run Go PreCommit'}} || ${{github.event.schedule == '*52 * * * *'}}
     runs-on: [ubuntu-latest]
     name: beam_PreCommit_Go_Phrase
     steps:
