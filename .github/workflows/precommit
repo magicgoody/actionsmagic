@@ -2,10 +2,9 @@ name: beam_PreCommit_Go
 
 on:
   push:
-    tags: ['v*']
-    branches: ['master', 'release-*']
+    branches: ['**']
   pull_request:   
-    branches: ['master']
+    branches: ['**']
   issue_comment:
     types: [created]
   schedule:
