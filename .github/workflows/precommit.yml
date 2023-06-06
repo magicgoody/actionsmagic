@@ -20,7 +20,9 @@ jobs:
             run: echo say hello standard pr
 
   beam_PreCommit_Go_Phrase:
-    if: ${{ github.event.issue.pull_request == 'Run Go PreCommit'}}
+#   if: ${{ github.event.issue.pull_request == 'Run Go PreCommit'}}
+# if: ${{github.event.issue.pull_request}} && 
+    if: ${{github.event.comment.body == 'Run Go PreCommit'}}
     runs-on: [ubuntu-latest]
     name: beam_PreCommit_Go_Phrase
     steps:
