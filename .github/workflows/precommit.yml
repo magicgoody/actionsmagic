@@ -1,24 +1,24 @@
-name: beam_PreCommit_Go
+# name: beam_PreCommit_Go
 
-on:
-  push:
-    tags: ['v*']
-    branches: ['main', 'release-*']
-  pull_request:   
-    branches: ['main', 'release-*']
-  issue_comment:
-    types: [created]
-  schedule:
-    - cron: '*/15 * * * *'
+# on:
+#   push:
+#     tags: ['v*']
+#     branches: ['main', 'release-*']
+#   pull_request:   
+#     branches: ['main', 'release-*']
+#   issue_comment:
+#     types: [created]
+#   schedule:
+#     - cron: '*/15 * * * *'
 
 
-jobs:
-  beam_PreCommit_Go:
-#   if: ${{ github.event.issue.pull_request == 'Run Go PreCommit'}}
-# if: ${{github.event.issue.pull_request}} && 
-    if: ${{github.event.issue.pull_request}} || ${{github.event.comment.body == 'Run Go PreCommit'}} || ${{github.event.schedule}}
-    runs-on: [ubuntu-latest]
-    name: beam_PreCommit_Go_Phrase
-    steps:
-      - name: run goPreCommit script
-        run: echo say hello from comment 
+# jobs:
+#   beam_PreCommit_Go:
+# #   if: ${{ github.event.issue.pull_request == 'Run Go PreCommit'}}
+# # if: ${{github.event.issue.pull_request}} && 
+#     if: ${{github.event.issue.pull_request}} || ${{github.event.comment.body == 'Run Go PreCommit'}} || ${{github.event.schedule}}
+#     runs-on: [ubuntu-latest]
+#     name: beam_PreCommit_Go_Phrase
+#     steps:
+#       - name: run goPreCommit script
+#         run: echo say hello from comment 
