@@ -4,8 +4,8 @@ on:
   push:
 #    tags: ['v*']
 #    branches: ['main', 'release-*']
-  pull_request:   
-    branches: ['main', 'release-*']
+#  pull_request:   
+#    branches: ['main', 'release-*']
   issue_comment:
     types: [created]
   schedule:
