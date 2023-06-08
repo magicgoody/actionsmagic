@@ -16,7 +16,7 @@ jobs:
   beam_PreCommit_Go:
 #   if: ${{ github.event.issue.pull_request == 'Run Go PreCommit'}}
 # if: ${{github.event.issue.pull_request}} && 
-    if: ${{github.event.issue.pull_request}} || ${{github.event.comment.body == 'Run Go PreCommit'}} || ${{github.event.schedule}}
+    if: ${{github.event.issue.pull_request}} || ${{github.event.comment.body == 'Run Go PreCommit'}} || ${{github.event.schedule}} || ${{github.event_name == 'push'}}
     runs-on: [ubuntu-latest]
     name: beam_PreCommit_Go_Phrase
     steps:
