@@ -2,14 +2,14 @@ name: beam_PreCommit_Go
 
 on:
   push:
-    # tags: ['v*']
-    # branches: ['main', 'release-*']
-  # pull_request:   
-  #   branches: ['main', 'release-*']
+     tags: ['v*']
+     branches: ['main', 'release-*']
+   pull_request:   
+     branches: ['main', 'release-*']
   issue_comment:
     types: [created]
-  schedule:
-    - cron: '*/15 * * * *'
+  # schedule:
+  #   - cron: '*/15 * * * *'
 
 
 jobs:
